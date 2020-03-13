@@ -53,7 +53,7 @@ body,html{
     font-variant-caps: small-caps;
     font-family: sans-serif;
     text-decoration: overline;
-    color: #d8d8d8c7;
+    color: #ffffffc7;
 }
 .footer{
     background-color: #cacacabb;
@@ -96,13 +96,21 @@ body,html{
     width: 50%;
     float: left;
 }
-#herotit,#herosub{
+#herotit{
+    font-size: 40px;
+    text-align:  left;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 40em;
+    animation: type 3s steps(60, end); 
+  }
+  #herosub{
     font-size: 20px;
     text-align:  left;
     white-space: nowrap;
     overflow: hidden;
     width: 40em;
-    animation: type 6s steps(60, end); 
+    animation: type 5s steps(60, end); 
   }
   
   @keyframes type{ 
