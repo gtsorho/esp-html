@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="bulma-0.8.0/css/bulma.min.css">
+     <link rel="stylesheet" href="css/style.css">
+    <script defer src="fontawesome-free-5.12.1-web/js/all.js"></script>
+  </head>
+  <body style="background-image: url('media/landimage.jpg');">
+    <div class="overlay">
+      <div class="container">
+        <nav class="navbar " role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a href="index.html">
+              <img src="media/crops-clipart-agriculture-product-17.png" width="50px"  >
+              <h1 id="lgtxt"> <b> PreFarm</b></h1>
+            </a>
+        
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+        </nav>
+      </div>
+
+
+      <section class="hero">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title" id="herotit" style="color: #e8e8e8;">
+              PRECICE FARMING
+            </h1>
+            <h6 class="subtitle" id="herosub" style="color: #e8e8e8;">
+              We provide you with level of accuracy on data, and the ability to control anywhere <br>
+              across the internet
+            </h6>
+          </div>
+        </div>
+      </section>
+
+        <div class="tile is-parent is-3.5 is-pulled-right " id="signIn">
+        <article class="tile is-child notification " id="signinArt">
+          <div class="content" id="signincont">
+          <!-- signIn form -->
+          <form action="">
+          <div class="field">
+            <p class="control has-icons-left has-icons-right">
+              <input class="input" type="email" placeholder="Email">
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-check"></i>
+              </span>
+            </p>
+          </div>
+          <div class="field">
+            <p class="control has-icons-left">
+              <input class="input" type="password" placeholder="Password">
+              <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+              </span>
+            </p>
+          </div>
+          <div class="field">
+            <p class="control">
+              <button class="button is-success">
+                Login
+              </button>
+            </p>
+          </div>
+           
+          </form>
+          <button id="sgnbtn" class="button is-success"  onclick="toggleSignUp()">
+            signUp
+        </button>
+          
+          <!-- end of signIn form -->
+    
+         
+    
+        </div>
+        </article>
+      </div>
+
+
+
+      <div class="tile is-parent is-3.5 is-pulled-right " id="signUp">
+        <article class="tile is-child notification " id="signupArt" >
+          <div class="content" >
+            <!-- signup form -->
+            <form action="">
+            <div class="field">
+              <label class="label">First Name</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="John">
+              </div>
+            </div>
+            
+            <div class="field">
+              <label class="label">Last Name</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Koomson">
+              </div>
+            </div>
+            
+            <div class="field">
+              <label class="label">Email</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                  <i class="fas fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <p class="help is-danger">This email is invalid</p>
+            </div>
+            <div class="field">
+              <label class="label">City/Town</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="input is-danger" type="text" placeholder="Tepa">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-globe"></i>
+                </span>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Phone</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="input is-danger" type="text" placeholder="024 xxx xxxx">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-phone"></i>
+                </span>
+              </div>
+            </div>
+            
+            <div class="field">
+              <label class="label">Password</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="input is-danger" type="password" placeholder="000000000">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-key"></i>
+                </span>
+              </div>
+              <p class="help is-danger">doesn't meet requirements</p>
+            </div>
+            
+            <div class="field">
+              <label class="label">Confirm Password</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="input is-danger" type="password" placeholder="000000000">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-key"></i>
+                </span>
+              </div>
+              <p class="help is-danger">doesn't match</p>
+            </div>
+            
+            <div class="field">
+              <div class="control">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  I agree to the <a href="#">terms and conditions</a>
+                </label>
+              </div>
+            </div>
+            
+            
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-link">Submit</button>
+              </div>
+              
+            </div>
+            </form>
+              <button class="button is-link is-success" onclick="togglelogIn()" id="lgnbtn">LogIn</button>
+            <!-- end of signup -->
+        </article>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- footer -->
+  <footer class="footer is-fixed-bottom">
+    <div class="content has-text-centered">
+      <p>
+        <strong>PreFarm</strong> by <a href="">George Turkson </a>and   <a href=""> Kenneth Kumi</a>
+        A final year project
+      </p>
+    </div>
+  </footer>
+<!-- footer end -->
+    </div>
+    
+
+  </body>
+
+  <script src="js/main.js"></script>
+</html>
