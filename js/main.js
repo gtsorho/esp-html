@@ -33,7 +33,7 @@ function toggleSignUp() {
     var on = document.getElementById("onbtn");
     var off = document.getElementById("offbtn");
 
-    off.setAttribute('class', 'button is-success');
+    off.setAttribute('class', 'button is-dark');
     on.setAttribute('class','button')
 
 }

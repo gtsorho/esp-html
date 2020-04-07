@@ -213,9 +213,37 @@
   </footer>
 <!-- footer end -->
     </div>
-    
 
   </body>
 
   <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
+  <script  src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+  crossorigin="anonymous"></script>
+  <script>
+    alert("hello")
+    const socket = io("http://esp-nodjs.herokuapp.com")
+    socket.on('connect', function(){
+      socket.on('data', function(data){
+      console.log(data)
+    })
+    });
+    
+    var status  = document.getElementById('status').value
+
+    // if(!status) alert("field cannot be empty");
+    // else{
+    //   $.ajax({
+    //     url: "http://esp-nodjs.herokuapp.com/api/add_todo",
+    //     method: "POST",
+    //     data: {status: status},
+    //     dataType: "json"
+    //   }).then(res => {
+        
+    //   }).catch(error => {
+    //     console.log(error)
+    //   })
+    // }
+    
+  </script>
 </html>
