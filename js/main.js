@@ -50,7 +50,7 @@ function userpro(){
 
      document.getElementById("profile").setAttribute('class','panel-block is-active');
      document.getElementById("settings").setAttribute('class','panel-block ');
-     document.getElementById("note").setAttribute('class','panel-block ');
+     document.getElementById("notes").setAttribute('class','panel-block ');
      document.getElementById("center").setAttribute('class','panel-block ');
 
 }
@@ -67,7 +67,7 @@ function userset(){
 
      document.getElementById("profile").setAttribute('class','panel-block ');
      document.getElementById("settings").setAttribute('class','panel-block is-active');
-     document.getElementById("note").setAttribute('class','panel-block ');
+     document.getElementById("notes").setAttribute('class','panel-block ');
      document.getElementById("center").setAttribute('class','panel-block ');
 }
 function notification(){
@@ -100,6 +100,6 @@ function controlcenter(){
     document.getElementById("center").setAttribute('class','panel-block is-active');
     document.getElementById("profile").setAttribute('class','panel-block ');
     document.getElementById("settings").setAttribute('class','panel-block ');
-    document.getElementById("note").setAttribute('class','panel-block ');
+    document.getElementById("notes").setAttribute('class','panel-block ');
     
 }

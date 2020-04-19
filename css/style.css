@@ -116,3 +116,15 @@ body,html{
   @keyframes type{ 
     from { width: 0; } 
   } 
+  #signup_msg{
+      text-align: center;
+      color: rgb(226, 206, 164);
+      background-color: teal;
+      margin-bottom: 15px;
+  }
+  #signin_msg{
+    text-align: center;
+    color: rgb(226, 206, 164);
+    background-color: teal;
+    margin-bottom: 15px;
+}
