@@ -396,7 +396,7 @@
       responsive: true,
       title: {
         display: true,
-        text: 'Average Values Per-Day'
+        text: 'Sensor Readings per Time'
       },
       tooltips: {
         mode: 'index',
@@ -411,7 +411,7 @@
           display: true,
           scaleLabel: {
             display: true,
-            labelString: 'Week'
+            labelString: 'Date and Time'
           }
         }],
         yAxes: [{
@@ -432,13 +432,8 @@
     
     var token = localStorage.getItem('access_token')
     var id
-      // if(token == 'null'){
-      //   window.location = 'index.html'
-      // }
-     
-
     $.ajax({
-      url: "http://127.0.0.1:8000/api/espdata/user",
+      url: "https://prefarmapi.herokuapp.com/api/espdata/user",
       method: "get",
       headers: {
         "Authorization": `Bearer ${token}`
@@ -446,7 +441,7 @@
       dataType: "json",
       success: function (response) {
         // response[0] 
-        console.log(token)
+        // console.log(token)
         $('#user_intro').html('Hi ' + response[0].firstName + ',')
         $('#profile_name').html(response[0].firstName + ' ' + response[0].surname)
         $('#profile_email').html(response[0].email)
@@ -458,6 +453,7 @@
         $("#set_email").val(response[0].email);
 
         id = response[0].id
+
       },
 
       error: function (response) {
@@ -465,25 +461,10 @@
       }
     })
 
-
-    $.ajax({
-      url: "http://127.0.0.1:8000/api/espdata",
-      method: "get",
-      headers: {
-        "Authorization": `Bearer ${token}`,
-      },
-      success: function (response) {
-        console.log(response)
-      }
-    })
-
-   
-
-
     $('#save_set').click(function (e) {
       e.preventDefault();
       $.ajax({
-        url: 'http://127.0.0.1:8000/api/espdata/profile_update/' + id,
+        url: 'https://prefarmapi.herokuapp.com/api/espdata/profile_update/' + id,
         method: 'patch',
         headers: {
           "Authorization": `Bearer ${token}`
@@ -548,7 +529,7 @@
     $('#logout_btn').click(function (e) {
       e.preventDefault();
       $.ajax({
-        url: "http://127.0.0.1:8000/api/espdata/logout",
+        url: "https://prefarmapi.herokuapp.com/api/espdata/logout",
         method: 'post',
         headers: {
           "Authorization": `Bearer ${token}`
@@ -557,6 +538,7 @@
         success: function (response) {
           window.location = "index.html"
           window.localStorage.setItem('access_token',null)
+          window.localStorage.setItem('user_id',null)
         }
       })
     })
